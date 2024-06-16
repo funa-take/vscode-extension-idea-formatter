@@ -1,0 +1,37 @@
+version: '3'
+services:
+  node:
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      # - ./servlet:/work
+      # - m2:/home/user/.m2
+      # - vscode:/home/user/.vscode-server
+      - ../:/work
+      # - ../vscode-server:/root/.vscode-server/
+      - ../settings.json:/root/.vscode-server/data/Machine/settings.json
+      - /home/user/temp/idea-IC-241.17890.1/:/idea
+    # ports:
+    #   - 8080:8080
+    working_dir: /work
+    command: sleep infinity
+#   tomcat:
+#     build:
+#       context: ./tomcat
+#       dockerfile: ./dockerfile
+#     environment:
+#       JPDA_ADDRESS: 0.0.0.0:8000
+#     volumes:
+#       - ./:/work
+#       - ./tomcat/server.xml:/usr/local/tomcat/conf/server.xml
+#       - ./tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+#       - ./tomcat/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
+#     working_dir: /work
+#     command: catalina.sh jpda run
+#     ports:
+#       - 8080:8080
+
+# volumes:
+#   m2:
+#   vscode:

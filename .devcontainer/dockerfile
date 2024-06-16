@@ -1,0 +1,4 @@
+FROM node:22
+
+run apt update && apt install -y openjdk-17-jdk
+run npm install -g vsce

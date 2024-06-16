@@ -1,0 +1,15 @@
+{
+  "name": "develop vscode extensions",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "node",
+  "workspaceFolder": "/work",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}
